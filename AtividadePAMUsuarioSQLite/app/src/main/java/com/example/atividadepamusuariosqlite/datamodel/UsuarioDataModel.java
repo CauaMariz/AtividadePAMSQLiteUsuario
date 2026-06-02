@@ -1,4 +1,4 @@
-package com.example.atividadepamusuariosqlite.datamodel;
+    package com.example.atividadepamusuariosqlite.datamodel;
 
 public class UsuarioDataModel{
     public static final String TABELA = "usuario";

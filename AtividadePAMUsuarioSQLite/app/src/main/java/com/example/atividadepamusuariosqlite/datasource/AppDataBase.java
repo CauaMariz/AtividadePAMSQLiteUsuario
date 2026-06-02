@@ -10,22 +10,24 @@ import com.example.cauamarizatividadeiipamii.datamodel.ClienteDataModel;
 
 public class AppDataBase extends SQLiteOpenHelper {
 
-    public static final String NAME = "atividade_caua.sqlite";
+    public static final String NAME = "atividade_Caua.sqlite";
     public static int version = 2;
+    SQLiteDatabase db;
 
-    public AppDataBase(Context context) {
+    public AppDataBase(Context context){
         super(context, NAME, null, version);
+        db = getWritableDatabase();
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        Log.i(AppUtil.TAG, "Criando a tabela: " + ClienteDataModel.TABELA);
+        Log.i(AppUtil.TAG, "Criando a tabela " + ClienteDataModel.TABELA);
         db.execSQL(ClienteDataModel.criarTabela());
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + ClienteDataModel.TABELA);
-        onCreate(db);
+        db.execSQL("DROP TABLE " + ClienteDataModel.TABELA);
+
     }
 }
