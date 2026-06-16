@@ -27,7 +27,18 @@ public class AppDataBase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE " + ClienteDataModel.TABELA);
 
+    }
+
+    /*
+        Esse metodo insert é de um metodo da classe SQLiteOpenHelper
+        Ela pega um nome da tabela e um objeto ContentValues e tenta inserir o registro na tabela. Se conseguir, retorna maior que zero e o retorno fica verdadeiro.
+        Esse retorno é retornado para o controller que emite uma mensagem ao usuario se conseguiu ou nao inserir o registro
+    */
+
+    public boolean insert(String tabela, ContentValues dados){
+        db = getWritableDatabase();
+        boolean retorno = false;
+        return db.insert(tabela, null, dados) > 0;
     }
 }
