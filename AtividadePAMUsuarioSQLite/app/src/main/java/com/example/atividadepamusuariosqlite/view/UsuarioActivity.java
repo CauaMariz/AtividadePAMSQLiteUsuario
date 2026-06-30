@@ -9,18 +9,18 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.atividadepamusuariosqlite.R;
-import com.example.atividadepamusuariosqlite.controller.UsuarioController;
+import com.example.atividadepamusuariosqlite.controller.ClienteController;
 
     public class UsuarioActivity extends AppCompatActivity {
 
-    UsuarioController usuarioController;
+    ClienteController clienteController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_usuario);
 
-        usuarioController = new UsuarioController(this);
+        clienteController = new ClienteController(this);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

@@ -5,10 +5,9 @@ public class Cliente {
     private int id;
     private String nome;
     private String email;
-    private String endereco;
-    private String cidade;
+
     private String telefone;
-    private String cep;
+
 
     public int getId() {
         return id;
@@ -34,21 +33,6 @@ public class Cliente {
         this.email = email;
     }
 
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
 
     public String getTelefone() {
         return telefone;
@@ -58,11 +42,4 @@ public class Cliente {
         this.telefone = telefone;
     }
 
-    public String getCep() {
-        return cep;
-    }
-
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
 }

@@ -1,14 +1,16 @@
-package com.example.cauamarizatividadeiipamii.datasource;
+package com.example.atividadepamusuariosqlite.datasource;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.example.cauamarizatividadeiipamii.api.AppUtil;
-import com.example.cauamarizatividadeiipamii.datamodel.ClienteDataModel;
+import com.example.atividadepamusuariosqlite.datamodel.ClienteDataModel;
+import com.example.atividadepamusuariosqlite.model.Cliente;
+import com.example.atividadepamusuariosqlite.api.AppUtil;
 
-public class AppDataBase extends SQLiteOpenHelper {
+public abstract class AppDataBase extends SQLiteOpenHelper {
 
     public static final String NAME = "atividade_Caua.sqlite";
     public static int version = 2;
@@ -41,4 +43,12 @@ public class AppDataBase extends SQLiteOpenHelper {
         boolean retorno = false;
         return db.insert(tabela, null, dados) > 0;
     }
+
+    public abstract boolean incluir(Cliente obj);
+
+    public abstract boolean alterar(Cliente obj);
+
+    public abstract boolean deletar(Cliente obj);
+
+    public abstract boolean listar(Cliente obj);
 }

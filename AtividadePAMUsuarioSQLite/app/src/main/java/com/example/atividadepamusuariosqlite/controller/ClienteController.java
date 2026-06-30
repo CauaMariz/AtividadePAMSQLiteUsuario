@@ -1,8 +1,13 @@
 package com.example.atividadepamusuariosqlite.controller;
 
+import android.content.ContentValues;
 import android.content.Context;
 
-import com.example.cauamarizatividadeiipamii.datasource.AppDataBase;
+import androidx.annotation.NonNull;
+
+import com.example.atividadepamusuariosqlite.datamodel.ClienteDataModel;
+import com.example.atividadepamusuariosqlite.datasource.AppDataBase;
+import com.example.atividadepamusuariosqlite.model.Cliente;
 
 
 public class ClienteController extends AppDataBase {
@@ -11,7 +16,7 @@ public class ClienteController extends AppDataBase {
     }
 
     public boolean inserir(@NonNull Cliente obj){
-        dados = new ContentValues();
+        ContentValues dados = new ContentValues();
         dados.put(ClienteDataModel.NOME, obj.getNome());
         dados.put(ClienteDataModel.EMAIL, obj.getEmail());
 

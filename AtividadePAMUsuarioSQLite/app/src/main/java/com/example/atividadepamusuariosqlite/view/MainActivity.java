@@ -17,7 +17,6 @@ import com.example.atividadepamusuariosqlite.controller.ClienteController;
 
 public class MainActivity extends AppCompatActivity {
     ClienteController clienteController;
-    Button alterar;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,10 +25,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_usuario);
 
-        alterar = findViewById(R.id.btnAlterar);
-        alterar.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, AlterarClienteActivity.class);
-        });
+
         clienteController = new ClienteController(this);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

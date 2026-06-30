@@ -1,4 +1,4 @@
-package com.example.cauamarizatividadeiipamii.controller;
+package com.example.atividadepamusuariosqlite.controller;
 
 public interface iCRUD<T> {
     public boolean incluir(T obj);
