@@ -9,8 +9,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.atividadepamusuariosqlite.R;
+import com.example.atividadepamusuariosqlite.controller.UsuarioController;
 
-public class UsuarioActivity extends AppCompatActivity {
+    public class UsuarioActivity extends AppCompatActivity {
 
     UsuarioController usuarioController;
     @Override

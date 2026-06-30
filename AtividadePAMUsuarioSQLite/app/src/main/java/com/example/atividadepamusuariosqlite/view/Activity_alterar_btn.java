@@ -10,13 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 import com.example.atividadepamusuariosqlite.R;
-import com.example.atividadepamusuariosqlite.controller.ClienteController;
 
 
-public class MainActivity extends AppCompatActivity {
-    ClienteController clienteController;
+
+public class Activity_alterar_btn extends AppCompatActivity {
     Button alterar;
 
     @SuppressLint("MissingInflatedId")
@@ -28,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         alterar = findViewById(R.id.btnAlterar);
         alterar.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, AlterarClienteActivity.class);
+            Intent intent = new Intent(Activity_alterar_btn.this, AlterarClienteActivity.class);
         });
-        clienteController = new ClienteController(this);
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

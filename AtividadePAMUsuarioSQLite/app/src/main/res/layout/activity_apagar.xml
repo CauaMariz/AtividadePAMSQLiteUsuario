@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".apagar">
+    tools:context=".view.ApagarActivity">
 
 
     <LinearLayout
@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        >
+        tools:ignore="MissingConstraints">
 
 
         <TextView
@@ -55,7 +55,8 @@
             android:text="Apagar"
             app:cornerRadius="5dp"
             tools:layout_editor_absoluteX="63dp"
-            tools:layout_editor_absoluteY="243dp" />
+            tools:layout_editor_absoluteY="243dp"
+        tools:ignore="MissingConstraints" />
 
         <Button
         android:id="@+id/button2"
@@ -65,6 +66,7 @@
         android:text="Voltar"
         app:cornerRadius="5dp"
         tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="243dp" />
+        tools:layout_editor_absoluteY="243dp"
+            tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -6,13 +6,6 @@ public class ClienteDataModel{
     public static final String NOME = "nome";
     public static final String EMAIL = "email";
 
-    public static final String ENDERECO = "endereco";
-
-    public static final String CIDADE = "cidade";
-
-    public static final String TELEFONE = "telefone";
-
-    public static final String CEP = "cep";
     public static String queryCriarTabela = "";
 
     public static String criarTabela(){

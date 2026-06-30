@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AtividadePAMUsuarioSQLite">
         <activity
+            android:name=".view.activity_alterar_btn"
+            android:exported="false" />
+        <activity
             android:name=".view.UsuarioActivity"
             android:exported="false" />
         <activity
